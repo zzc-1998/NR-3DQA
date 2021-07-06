@@ -8,9 +8,9 @@ We test the code with Python 3.7 (and higher) on the Windows platform and the co
 
 You should get the h5py package by 
 
-'''python
+```
 pip install h5py
-'''
+```
 
 And the documentation for h5py can be found at [https://docs.h5py.org/en/stable/].
 
@@ -25,11 +25,11 @@ We will provide the extracted features for SJTU-PCQA and our SVR experiment code
 
 # Citation
 If you find our work useful, please cite our work as:
-'''@misc{zhang2021noreference,
+```@misc{zhang2021noreference,
       title={No-Reference Quality Assessment for Colored Point Cloud and Mesh Based on Natural Scene Statistics}, 
       author={Zicheng Zhang},
       year={2021},
       eprint={2107.02041},
       archivePrefix={arXiv},
       primaryClass={cs.CV}
-}'''
+}```
