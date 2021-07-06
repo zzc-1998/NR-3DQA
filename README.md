@@ -25,11 +25,13 @@ We will provide the extracted features for SJTU-PCQA and our SVR experiment code
 
 # Citation
 If you find our work useful, please cite our work as:
-```@misc{zhang2021noreference,
+```
+@misc{zhang2021noreference,
       title={No-Reference Quality Assessment for Colored Point Cloud and Mesh Based on Natural Scene Statistics}, 
       author={Zicheng Zhang},
       year={2021},
       eprint={2107.02041},
       archivePrefix={arXiv},
       primaryClass={cs.CV}
-}```
+}
+```
