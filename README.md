@@ -8,7 +8,9 @@ We test the code with Python 3.7 (and higher) on the Windows platform and the co
 
 You should get the h5py package by 
 
-'''pip install h5py'''
+'''python
+pip install h5py
+'''
 
 And the documentation for h5py can be found at [https://docs.h5py.org/en/stable/].
 
