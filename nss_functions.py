@@ -77,10 +77,13 @@ def estimate_aggd_param(vec):
        
             
 def estimate_gamma_param(vec):
-        """Estimate GAMMA parameter.
+        """Estimate AGGD parameter.
         :param vec: The vector that we want to approximate its parameter.
         :type vec: np.ndarray
         """
-        alpha,loc,beta = scipy.stats.gamma.fit(vec)
-        result = [alpha,beta]
+        mean = np.mean(vec)
+        std = np.std(vec)
+        shape = (mean/std)**2
+        scale = (std**2)/mean
+        result = [shape,scale]
         return result
