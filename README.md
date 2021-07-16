@@ -15,7 +15,7 @@ pip install h5py
 And the documentation for h5py can be found at [https://docs.h5py.org/en/stable/].
 
 ## Demo
-The **feature_extract.py** includes a demo for the feature extraction of colored point cloud and we provide with a colored point cloud sample **hhi_5.ply**.
+The **demo.py** includes a demo for the feature extraction of colored point cloud and we provide with a colored point cloud sample **hhi_5.ply**.
 
 ## Database
 The code is tested on the SJTU-PCQA database which can be downloaded at [https://smt.sjtu.edu.cn/].
