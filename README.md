@@ -1,5 +1,5 @@
 # Paper
-This the code for "No-Reference Quality Assessment for Colored Point Cloud and Mesh Based on Natural Scene Statistics" and it is the point cloud version.
+This the code for "No-Reference Quality Assessment for 3D Colored Point Cloud and Mesh Models" and it is the point cloud version.
 The paper can be found here [http://arxiv.org/abs/2107.02041].
 
 # How to start with the code?
@@ -27,7 +27,7 @@ We will provide the extracted features for SJTU-PCQA and our SVR experiment code
 If you find our work useful, please cite our work as:
 ```
 @misc{zhang2021noreference,
-      title={No-Reference Quality Assessment for Colored Point Cloud and Mesh Based on Natural Scene Statistics}, 
+      title={No-Reference Quality Assessment for 3D Colored Point Cloud and Mesh Models}, 
       author={Zicheng Zhang},
       year={2021},
       eprint={2107.02041},
