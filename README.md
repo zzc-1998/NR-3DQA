@@ -20,8 +20,9 @@ The **demo.py** includes a demo for the feature extraction of colored point clou
 ## Database
 The code is tested on the SJTU-PCQA database which can be downloaded at [https://smt.sjtu.edu.cn/].
 
-## Experiment
+## Experiment Update
 We will provide the extracted features for SJTU-PCQA and our SVR experiment code in the future. 
+**2021.11.12** We update the temporary experiment files for SJTU-PCQA, which includes the MOSs and extracted features for point clouds in the SJTU-PCQA database. The experment files are for reference only and do not represent the final results of the paper.
 
 # Citation
 If you find our work useful, please cite our work as:
