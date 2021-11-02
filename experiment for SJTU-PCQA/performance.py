@@ -11,13 +11,11 @@ train_name_list = ['redandblack','Romanoillamp','loot','soldier','longdress','st
 test_name_list = ['ULB Unicorn','hhi']
 
 def get_feature_name():
-    #features = ["l","a","b","curvature","anisotropy","linearity","planarity","sphericity"]
     features = ["l","a","b","curvature","anisotropy","linearity","planarity","sphericity"]
     nss_list = [["mean","std","entropy"],["ggd1","ggd2"],["aggd1","aggd2","aggd3","aggd4"],["gamma1","gamma2"]]
     total_nss_list = ["mean","std","entropy","ggd1","ggd2","aggd1","aggd2","aggd3","aggd4","gamma1","gamma2"]
     feature_list = []
     for feature in features[:]:
-        #for nss in nss_list[0]:
         for nss in total_nss_list:
              feature_list.append(feature + "_" + nss)
     return feature_list
@@ -68,12 +66,6 @@ for i in range(9):
         test_name_list = [train_name_list.pop(j),train_name_list.pop(i)]
         # get data
         train_set,train_score,test_set,test_score = get_data(train_name_list,test_name_list)
-        # scale whole data
-        # for tmp in test_set:
-        #     train_set.append(tmp)
-        # train_set = scale(train_set)
-        # test_set = train_set[294:]
-        # train_set = train_set[:294]
         # begin training
         svr = SVR(kernel='rbf', degree=3, gamma='scale', coef0=0.0, tol=0.001, C=1.0, epsilon=0.1, shrinking=True, cache_size=200, verbose=False, max_iter=- 1)
         svr.fit(train_set, train_score)
