@@ -2,7 +2,7 @@ from feature_extract import get_feature_vector
 import time
 
 #demo
-objpath = "hhi_5.ply"
+objpath = "models/hhi_5.ply"
 start = time.time()
 features = get_feature_vector(objpath)
 end = time.time()
