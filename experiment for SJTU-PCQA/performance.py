@@ -43,12 +43,6 @@ def get_data(train_name_list,test_name_list):
     return scale(train_set),train_score,scale(test_set),test_score
 
 
-
-
-plcc = []
-srcc =[]
-rmse = []
-krcc = []
 # generate train_name_list and test_name_list
 train_name_list = ['Romanoillamp','loot','ULB Unicorn','longdress','statue','shiva','hhi']
 test_name_list = ['redandblack','soldier']
