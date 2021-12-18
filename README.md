@@ -30,7 +30,7 @@ If you find our work useful, please cite our work as:
 ```
 @misc{zhang2021noreference,
       title={No-Reference Quality Assessment for 3D Colored Point Cloud and Mesh Models}, 
-      author={Zicheng Zhang},
+      author={Zicheng Zhang and Wei Sun and Xiongkuo Min and Tao Wang and Wei Lu and Guangtao Zhai},
       year={2021},
       eprint={2107.02041},
       archivePrefix={arXiv},
