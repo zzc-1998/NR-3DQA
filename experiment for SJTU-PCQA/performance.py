@@ -43,9 +43,10 @@ def get_data(train_name_list,test_name_list):
     return scale(train_set),train_score,scale(test_set),test_score
 
 
+
 # generate train_name_list and test_name_list
-train_name_list = ['Romanoillamp','loot','ULB Unicorn','longdress','statue','shiva','hhi']
-test_name_list = ['redandblack','soldier']
+train_name_list = ['Romanoillamp','loot','soldier','longdress','statue','shiva','hhi']
+test_name_list = ['redandblack','ULB Unicorn']
 # get data
 train_set,train_score,test_set,test_score = get_data(train_name_list,test_name_list)
 # begin training
@@ -54,5 +55,5 @@ svr.fit(train_set, train_score)
 predict_score = svr.predict(test_set)
 print("SRCC:  "+ str((stats.pearsonr(predict_score, test_score)[0])))
 print("PLCC:  "+ str(stats.spearmanr(predict_score, test_score)[0]))
-print("KRCC:  "+ str(np.sqrt(((predict_score-test_score) ** 2).mean())))
-print("RMSE:  "+ str(stats.stats.kendalltau(predict_score, test_score)[0]))
+print("KRCC:  "+ str(stats.stats.kendalltau(predict_score, test_score)[0]))
+print("RMSE:  "+ str(np.sqrt(((predict_score-test_score) ** 2).mean())))
