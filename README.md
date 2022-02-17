@@ -14,7 +14,6 @@ pip install pyntcloud
 pip install scikit-image
 ```
 
-And the documentation for h5py can be found at [https://docs.h5py.org/en/stable/].
 
 ## Demo
 The **demo.py** includes a demo for the feature extraction of colored point cloud and we provide with a colored point cloud sample **hhi_5.ply**.
