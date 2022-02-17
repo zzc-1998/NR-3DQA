@@ -6,13 +6,11 @@ The paper can be found here [http://arxiv.org/abs/2107.02041].
 ## Environment settings
 We test the code with Python 3.7 (and higher) on the Windows platform and the code may run on linux as well.
 
-You should get the h5p, pyntcloud, skimage package by 
+You should get the h5py, pyntcloud, skimage package by 
 
 ```
 pip install h5py
-
 pip install pyntcloud
-
 pip install scikit-image
 ```
 
