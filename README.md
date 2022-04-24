@@ -20,7 +20,8 @@ The **demo.py** includes a demo for the feature extraction of colored point clou
 
 ## Database
 The code is tested on the SJTU-PCQA database which can be downloaded at [https://smt.sjtu.edu.cn/].
-The code is tested on the WPC database which can be downloaded at [https://github.com/qdushl/Waterloo-Point-Cloud-Database].
+
+The code is also tested on the WPC database which can be downloaded at [https://github.com/qdushl/Waterloo-Point-Cloud-Database].
 
 ## Experiment Update
 We will provide the extracted features for SJTU-PCQA and our SVR experiment code in the future. 
