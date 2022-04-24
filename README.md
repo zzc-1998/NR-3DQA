@@ -20,11 +20,16 @@ The **demo.py** includes a demo for the feature extraction of colored point clou
 
 ## Database
 The code is tested on the SJTU-PCQA database which can be downloaded at [https://smt.sjtu.edu.cn/].
+The code is tested on the WPC database which can be downloaded at [https://github.com/qdushl/Waterloo-Point-Cloud-Database].
 
 ## Experiment Update
 We will provide the extracted features for SJTU-PCQA and our SVR experiment code in the future. 
 
-**2021.11.12** We update the temporary experiment files for SJTU-PCQA, which includes the MOSs and extracted features for point clouds in the SJTU-PCQA database. The experment files are for reference only and do not represent the final results of the paper.
+**2021.11.12** We update the temporary experiment files for SJTU-PCQA, which includes the MOSs and extracted features for point clouds in the SJTU-PCQA database.
+
+**2022.04.24** We update the temporary experiment files for WPC, which includes the MOSs and extracted features for point clouds in the WPC database.
+
+
 
 # Citation
 If you find our work useful, please cite our work as:
