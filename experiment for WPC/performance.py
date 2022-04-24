@@ -4,7 +4,7 @@ from sklearn.preprocessing import scale
 import pandas as pd
 from scipy import stats
 
-name_list = ['bag','banana','biscuits','cake','cauliflower','flowerpot','glasses_case','honeydew_melon','house','litchi','mushroom','pen_container','pineapple','ping-pong_bat','puer_tea','pumpkin','ship','statue','stone','tool_box']
+# using the same training and testing set as stated in 'PQA-Net: Deep No Reference Point Cloud Quality Assessment via Multi-view Projection'
 train_name_list = ['bag','biscuits','cake','flowerpot','glasses_case','honeydew_melon','house','litchi','pen_container','ping-pong_bat','puer_tea','pumpkin','ship','statue','stone','tool_box']
 test_name_list = ['banana','cauliflower','mushroom','pineapple']
 
