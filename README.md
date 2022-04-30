@@ -25,7 +25,7 @@ The code is also tested on the WPC database which can be downloaded at [https://
 
 ## Experiment Update
 
-**2022.04.24** We update the temporary experiment files for WPC, which includes the MOSs and extracted features for point clouds in the WPC database.
+We update the temporary experiment files for WPC, which includes the MOSs and extracted features for point clouds in the WPC database.
 
 
 
