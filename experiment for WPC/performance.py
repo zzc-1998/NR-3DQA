@@ -1,10 +1,10 @@
 import numpy as np
 from sklearn.svm import SVR
-from sklearn.preprocessing import scale
+from sklearn.preprocessing import StandardScaler
 import pandas as pd
 from scipy import stats
 
-# using the same training and testing set as stated in 'PQA-Net: Deep No Reference Point Cloud Quality Assessment via Multi-view Projection'
+name_list = ['bag','banana','biscuits','cake','cauliflower','flowerpot','glasses_case','honeydew_melon','house','litchi','mushroom','pen_container','pineapple','ping-pong_bat','puer_tea','pumpkin','ship','statue','stone','tool_box']
 train_name_list = ['bag','biscuits','cake','flowerpot','glasses_case','honeydew_melon','house','litchi','pen_container','ping-pong_bat','puer_tea','pumpkin','ship','statue','stone','tool_box']
 test_name_list = ['banana','cauliflower','mushroom','pineapple']
 
@@ -44,7 +44,10 @@ def get_data(train_name_list,test_name_list):
                 data.remove('')
             test_set.append(data)
             test_score.append(score_data.loc[i,:].tolist()[0])
-    return scale(train_set),np.array(train_score)/100,scale(test_set),np.array(test_score)/100
+    scaler = StandardScaler()
+    train_set = scaler.fit_transform(train_set)
+    test_set = scaler.transform(test_set)
+    return train_set,np.array(train_score)/100,test_set,np.array(test_score)/100
     
 
 
