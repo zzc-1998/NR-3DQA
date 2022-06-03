@@ -30,8 +30,6 @@ def get_data(train_name_list,test_name_list):
                 obj_names.append(obj)
         for i in obj_names:
             data = feature_data.loc[i,:].tolist()
-            while '' in data:
-                data.remove('')
             train_set.append(data)
             train_score.append(score_data.loc[i,:].tolist()[0])
     
@@ -42,8 +40,6 @@ def get_data(train_name_list,test_name_list):
                 obj_names.append(obj)
         for i in obj_names:
             data = feature_data.loc[i,:].tolist()
-            while '' in data:
-                data.remove('')
             test_set.append(data)
             test_score.append(score_data.loc[i,:].tolist()[0])
     scaler = StandardScaler()
