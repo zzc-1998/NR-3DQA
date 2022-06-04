@@ -20,6 +20,10 @@ def get_feature_vector(objpath):
   cloud.add_scalar_field("planarity",ev=ev)
   cloud.add_scalar_field("sphericity",ev=ev)
   features = np.array(cloud.points.iloc[:,3:])
+  # features
+  # x y z (nx ny nz)(if have normals) r g b ... 
+  # if the point cloud has normals please use
+  # features = np.array(cloud.points.iloc[:,6:])
   curvature = features[:,6]
   anisotropy = features[:,7]
   linearity = features[:,8]
