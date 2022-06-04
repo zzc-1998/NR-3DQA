@@ -77,7 +77,7 @@ def estimate_aggd_param(vec):
        
             
 def estimate_gamma_param(vec):
-        """Estimate AGGD parameter.
+        """Estimate Gamma parameter.
         :param vec: The vector that we want to approximate its parameter.
         :type vec: np.ndarray
         """
