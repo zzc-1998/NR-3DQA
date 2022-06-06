@@ -51,7 +51,7 @@ def get_feature_vector(objpath):
   return nss_params
 
 #demo
-objpath = "hhi_5.ply"
+objpath = "models/hhi_5.ply"
 features = get_feature_vector(objpath)
 
 #show the features
