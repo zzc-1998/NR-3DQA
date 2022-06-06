@@ -8,8 +8,18 @@ from sklearn.preprocessing import scale,normalize
 def my_scale(vec):
         vec = (vec-np.mean(vec))/np.std(vec, ddof=1)
         return vec
-def get_nss_param(vec):
-     """Estimate NSS parameters.
+
+def get_color_nss_param(vec):
+     """Estimate color NSS parameters.
+        :param vec: The vector that we want to approximate its parameter.
+        :type vec: np.ndarray
+        :scale is the normalization function
+        """
+     return [estimate_basic_param(vec)]
+
+
+def get_geometry_nss_param(vec):
+     """Estimate geometry NSS parameters.
         :param vec: The vector that we want to approximate its parameter.
         :type vec: np.ndarray
         :scale is the normalization function
