@@ -1,6 +1,6 @@
 import numpy as np
 from sklearn.svm import SVR
-from sklearn.preprocessing import StandardScaler
+from sklearn.preprocessing import MinMaxScaler
 import pandas as pd
 from scipy import stats
 
@@ -42,7 +42,7 @@ def get_data(train_name_list,test_name_list):
             data = feature_data.loc[i,:].tolist()
             test_set.append(data)
             test_score.append(score_data.loc[i,:].tolist()[0])
-    scaler = StandardScaler()
+    scaler = MinMaxScaler()
     train_set = scaler.fit_transform(train_set)
     test_set = scaler.transform(test_set)
     return train_set,np.array(train_score)/100,test_set,np.array(test_score)/100
