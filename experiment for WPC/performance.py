@@ -4,17 +4,13 @@ from sklearn.preprocessing import MinMaxScaler
 import pandas as pd
 from scipy import stats
 
-
-# using the same training and testing set as in "PQA-Net: Deep No Reference Point Cloud Quality Assessment via Multi-view Projection"
 name_list = ['bag','banana','biscuits','cake','cauliflower','flowerpot','glasses_case','honeydew_melon','house','litchi','mushroom','pen_container','pineapple','ping-pong_bat','puer_tea','pumpkin','ship','statue','stone','tool_box']
-train_name_list = ['bag','biscuits','cake','flowerpot','glasses_case','honeydew_melon','house','litchi','pen_container','ping-pong_bat','puer_tea','pumpkin','ship','statue','stone','tool_box']
-test_name_list = ['banana','cauliflower','mushroom','pineapple']
 
 
+# get data according to the train test name lists, return scaled train and test set
 def get_data(train_name_list,test_name_list):
     feature_data = pd.read_csv("features.csv",index_col = 0,keep_default_na=False)
     feature_data = feature_data[feature_data.columns.values]
-    # print(feature_data)
     score_data = pd.read_csv("mos.csv")
     mos = score_data['mos'].tolist()
     total_obj_names = score_data['name']
@@ -49,10 +45,36 @@ def get_data(train_name_list,test_name_list):
     
 
 
-train_set,train_score,test_set,test_score = get_data(train_name_list,test_name_list)
-svr = SVR(kernel='rbf', degree=4, gamma='scale', coef0=0.1, tol=0.001, C=1.0, epsilon=0.1, shrinking=True, cache_size=200, verbose=False, max_iter=- 1)
-svr.fit(train_set, train_score)
-predict_score = svr.predict(test_set) 
-print("PLCC:  "+ str(stats.pearsonr(predict_score, test_score)[0]))
-print("SRCC:  "+ str(stats.spearmanr(predict_score, test_score)[0]))
-print("KRCC:  "+ str(stats.stats.kendalltau(predict_score, test_score)[0]))
+
+
+if __name__ == '__main__':
+    plcc = []
+    srcc =[]
+    krcc = []
+    for i in range(5):
+        # generate 5 folder cross validation split name lists
+        train_name_list = name_list.copy()
+        # get test set and remove the test content from the training set
+        test_name_list = [train_name_list.pop(4*i + 3),train_name_list.pop(4*i + 2),train_name_list.pop(4*i + 1),train_name_list.pop(4*i)]
+        print('Begin split ' + str(i+1) + ' and use the following list as test set:')
+        print(test_name_list)
+        # get the data according to the name lists
+        train_set,train_score,test_set,test_score = get_data(train_name_list,test_name_list)
+        # begin training and predicting
+        print('Begin training!')
+        svr = SVR(kernel='rbf')
+        svr.fit(train_set, train_score)
+        predict_score = svr.predict(test_set)
+        # record the result
+        plcc.append(stats.pearsonr(predict_score, test_score)[0])
+        srcc.append(stats.spearmanr(predict_score, test_score)[0])
+        krcc.append(stats.stats.kendalltau(predict_score, test_score)[0])
+        print('Training complete!')
+        print('------------------------------------------------------------------------------------------------------------------')
+    print('------------------------------------------------------------------------------------------------------------------')
+    print('Final Results presentation:')
+    print("SRCC:  "+ str(sum(srcc)/len(srcc)))
+    print("PLCC:  "+ str(sum(plcc)/len(plcc)))
+    print("KRCC:  "+ str(sum(krcc)/len(krcc)))
+
+
