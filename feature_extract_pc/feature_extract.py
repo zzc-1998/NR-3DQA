@@ -19,16 +19,16 @@ def get_feature_vector(objpath):
   cloud.add_scalar_field("linearity",ev=ev)
   cloud.add_scalar_field("planarity",ev=ev)
   cloud.add_scalar_field("sphericity",ev=ev)
-  curvature = cloud.points['curvature(11)'].to_numpy()
-  anisotropy = cloud.points['anisotropy(11)'].to_numpy()
-  linearity = cloud.points['linearity(11)'].to_numpy()
-  planarity = cloud.points['planarity(11)'].to_numpy()
-  sphericity = cloud.points['sphericity(11)'].to_numpy()
-
+  features = np.array(cloud.points.iloc[:,3:])
+  curvature = features[:,6]
+  anisotropy = features[:,7]
+  linearity = features[:,8]
+  planarity = features[:,9]
+  sphericity = features[:,10]
 
   #begin color projection
   print("Begin color feature extraction.")
-  rgb_color = cloud.points[['red','green','blue']].to_numpy()/255
+  rgb_color = features[:,:3]/255
   lab_color = color.rgb2lab(rgb_color)
   l = lab_color[:,0]
   a = lab_color[:,1]
