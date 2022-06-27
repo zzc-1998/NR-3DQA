@@ -2,7 +2,7 @@
 This is the code for "No-Reference Quality Assessment for 3D Colored Point Cloud and Mesh Models" and it is the point cloud version.
 The paper can be found here [http://arxiv.org/abs/2107.02041]. This paper has been accepted by IEEE Transactions on Circuits and Systems for Video Technology.
 
-<img align="center" src="https://github.com/zzc-1998/VQA_PC/blob/main/video.gif">
+<img align="center" src="https://github.com/zzc-1998/NR-3DQA/blob/main/framework.pdf">
 
 # How to start with the code?
 You should get the h5py, pyntcloud, skimage package by 
