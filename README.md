@@ -1,6 +1,6 @@
 # Paper
-This is the code for "No-Reference Quality Assessment for 3D Colored Point Cloud and Mesh Models" and it is the point cloud version.
-The paper can be found here [http://arxiv.org/abs/2107.02041]. This paper has been accepted by IEEE Transactions on Circuits and Systems for Video Technology.
+This is the code for "No-Reference Quality Assessment for 3D Colored Point Cloud and Mesh Models" and it is the point cloud version. This paper has been accepted by IEEE Transactions on Circuits and Systems for Video Technology.
+The arxiv version can be found here [http://arxiv.org/abs/2107.02041] and the TCVST version can be found here [https://ieeexplore.ieee.org/document/9810024]. 
 
 <img align="center" src="https://github.com/zzc-1998/NR-3DQA/blob/main/framework.jpg">
 
@@ -34,13 +34,14 @@ We do not use the GGD, AGGD, Gamma parameters of color features in this experime
 # Citation
 If you find our work useful, please cite our work as:
 ```
-@misc{zhang2021noreference,
-      title={No-Reference Quality Assessment for 3D Colored Point Cloud and Mesh Models}, 
-      author={Zicheng Zhang and Wei Sun and Xiongkuo Min and Tao Wang and Wei Lu and Guangtao Zhai},
-      year={2021},
-      eprint={2107.02041},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV}
-}
+@ARTICLE{zhang2022no,
+  author={Zhang, Zicheng and Sun, Wei and Min, Xiongkuo and Wang, Tao and Lu, Wei and Zhai, Guangtao},
+  journal={IEEE Transactions on Circuits and Systems for Video Technology}, 
+  title={No-Reference Quality Assessment for 3D Colored Point Cloud and Mesh Models}, 
+  year={2022},
+  volume={},
+  number={},
+  pages={1-1},
+  doi={10.1109/TCSVT.2022.3186894}}
 ```
 If you have further questions, please email us through **zzc1998@sjtu.edu.cn**.
