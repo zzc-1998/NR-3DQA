@@ -29,7 +29,8 @@ The code is also tested on the WPC database which can be downloaded at [https://
 We update the experiment files for SJTU-PCQA and WPC databases, which includes the MOSs and extracted features from point clouds.
 We do not use the GGD, AGGD, Gamma parameters of color features in this experiment version for simplification.
 
-
+## Other PCQA works
+We implement and collect several common PCQA metrics, which can be accessed through [https://github.com/zzc-1998/Full-reference-point-cloud-evaluation].
 
 # Citation
 If you find our work useful, please cite our work as:
